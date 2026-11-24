@@ -15,27 +15,17 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Model Context Protocol (MCP) Security Auditor | TAVARDT New Zealand</title>
-<meta content="Security auditor and configuration validator for Model Context Protocol (MCP) tools for New Zealand organisations. Web app and CLI." name="description"/>
+<meta content="Security auditor and permission validator for Model Context Protocol (MCP) tools and servers. Client-side web app and CLI." name="description"/>
 <link rel="icon" type="image/x-icon" href="./favicon.ico">
 <link href="./favicon.ico" rel="shortcut icon"/>
 <link href="https://tavardt-new-zealand.github.io/mcp-security-auditor-nz/" rel="canonical"/>
-<link href="https://tavardt-brasil.github.io/mcp-security-auditor-br/" hreflang="pt-BR" rel="alternate"/>
-<link href="https://tavardt-portugal.github.io/mcp-security-auditor-pt/" hreflang="pt-PT" rel="alternate"/>
-<link href="https://tavardt-usa.github.io/mcp-security-auditor-us/" hreflang="en-US" rel="alternate"/>
-<link href="https://tavardt-uk.github.io/mcp-security-auditor-uk/" hreflang="en-GB" rel="alternate"/>
-<link href="https://tavardt-canada.github.io/mcp-security-auditor-ca/" hreflang="en-CA" rel="alternate"/>
-<link href="https://tavardt-australia.github.io/mcp-security-auditor-au/" hreflang="en-AU" rel="alternate"/>
 <link href="https://tavardt-new-zealand.github.io/mcp-security-auditor-nz/" hreflang="en-NZ" rel="alternate"/>
-<link href="https://tavardt-espana.github.io/mcp-security-auditor-es/" hreflang="es-ES" rel="alternate"/>
-<link href="https://tavardt-mexico.github.io/mcp-security-auditor-mx/" hreflang="es-MX" rel="alternate"/>
-<link href="https://tavardt-france.github.io/mcp-security-auditor-fr/" hreflang="fr-FR" rel="alternate"/>
-<link href="https://tavardt-italia.github.io/mcp-security-auditor-it/" hreflang="it-IT" rel="alternate"/>
-<link href="https://tavardt-usa.github.io/mcp-security-auditor-us/" hreflang="x-default" rel="alternate"/>
+<link href="https://tavardt-new-zealand.github.io/mcp-security-auditor-nz/" hreflang="x-default" rel="alternate"/>
 <meta content="index, follow" name="robots"/>
 <meta content="website" property="og:type"/>
 <meta content="TAVARDT" property="og:site_name"/>
 <meta content="Model Context Protocol (MCP) Security Auditor | TAVARDT New Zealand" property="og:title"/>
-<meta content="Security auditor and configuration validator for Model Context Protocol (MCP) tools for New Zealand organisations. Web app and CLI." property="og:description"/>
+<meta content="Security auditor and permission validator for Model Context Protocol (MCP) tools and servers. Client-side web app and CLI." property="og:description"/>
 <meta content="https://tavardt-new-zealand.github.io/mcp-security-auditor-nz/" property="og:url"/>
 <meta content="https://tavardt-new-zealand.github.io/mcp-security-auditor-nz/og-image.jpg" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
@@ -44,7 +34,7 @@
 <meta content="en_NZ" property="og:locale"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Model Context Protocol (MCP) Security Auditor | TAVARDT New Zealand" name="twitter:title"/>
-<meta content="Security auditor and configuration validator for Model Context Protocol (MCP) tools for New Zealand organisations. Web app and CLI." name="twitter:description"/>
+<meta content="Security auditor and permission validator for Model Context Protocol (MCP) tools and servers. Client-side web app and CLI." name="twitter:description"/>
 <meta content="https://tavardt-new-zealand.github.io/mcp-security-auditor-nz/og-image.jpg" name="twitter:image"/>
 <script type="application/ld+json">
 {
@@ -58,11 +48,11 @@
       "applicationCategory": "SecurityApplication",
       "operatingSystem": "All",
       "browserRequirements": "Requires JavaScript. Requires HTML5.",
-      "description": "Security auditor and configuration validator for Model Context Protocol (MCP) tools for New Zealand organisations. Web app and CLI.",
+      "description": "Security auditor and permission validator for Model Context Protocol (MCP) tools and servers. Client-side web app and CLI.",
       "offers": {
         "@type": "Offer",
         "price": "0",
-        "priceCurrency": "NZD"
+        "priceCurrency": "CAD"
       },
       "publisher": {
         "@type": "Organization",
@@ -159,31 +149,18 @@
 }
 </script>
 <style>
-    :root {
-      --bg: #070b14;
-      --card-bg: #0f172a;
-      --card-border: #1e293b;
-      --accent: #06b6d4;
-      --accent-hover: #0891b2;
-      --text: #f1f5f9;
-      --text-muted: #94a3b8;
-      --pass: #10b981;
-      --warn: #f59e0b;
-      --fail: #ef4444;
-      --info: #3b82f6;
-      --code-bg: #020617;
-    }
+    
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
+      background-color: #070b14;
+      color: #f1f5f9;
       line-height: 1.6;
       padding: 0;
     }
     header {
       background-color: #0b1120;
-      border-bottom: 1px solid var(--card-border);
+      border-bottom: 1px solid #1e293b;
       padding: 1.25rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -199,7 +176,7 @@
     }
     .brand-sub {
       font-size: 0.85rem;
-      color: var(--text-muted);
+      color: #94a3b8;
     }
     .nav-links a {
       color: #cbd5e1;
@@ -208,7 +185,7 @@
       margin-left: 1.5rem;
       transition: color 0.2s;
     }
-    .nav-links a:hover { color: var(--accent); }
+    .nav-links a:hover { color: #06b6d4; }
     .container {
       max-width: 1100px;
       margin: 2.5rem auto;
@@ -227,7 +204,7 @@
     }
     .hero p {
       font-size: 1.05rem;
-      color: var(--text-muted);
+      color: #94a3b8;
       max-width: 820px;
       margin: 0 auto 1.5rem auto;
     }
@@ -245,12 +222,12 @@
       padding: 0.35rem 0.75rem;
       border-radius: 9999px;
       background-color: rgba(6, 182, 212, 0.15);
-      color: var(--accent);
+      color: #06b6d4;
       border: 1px solid rgba(6, 182, 212, 0.3);
     }
     .card {
-      background-color: var(--card-bg);
-      border: 1px solid var(--card-border);
+      background-color: #0f172a;
+      border: 1px solid #1e293b;
       border-radius: 12px;
       padding: 1.75rem;
       margin-bottom: 2rem;
@@ -263,7 +240,7 @@
     }
     .card-desc {
       font-size: 0.9rem;
-      color: var(--text-muted);
+      color: #94a3b8;
       margin-bottom: 1.25rem;
     }
     .presets-row {
@@ -286,7 +263,7 @@
     .btn-preset:hover {
       background-color: #334155;
       color: #fff;
-      border-color: var(--accent);
+      border-color: #06b6d4;
     }
     .btn-preset-danger {
       border-color: rgba(239, 68, 68, 0.4);
@@ -307,8 +284,8 @@
     textarea {
       width: 100%;
       height: 240px;
-      background-color: var(--code-bg);
-      border: 1px solid var(--card-border);
+      background-color: #020617;
+      border: 1px solid #1e293b;
       border-radius: 8px;
       color: #38bdf8;
       font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
@@ -320,11 +297,11 @@
     }
     textarea:focus {
       outline: none;
-      border-color: var(--accent);
+      border-color: #06b6d4;
       box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.2);
     }
     .btn-primary {
-      background-color: var(--accent);
+      background-color: #06b6d4;
       color: #04101c;
       border: none;
       padding: 0.85rem 1.75rem;
@@ -336,7 +313,7 @@
       display: inline-block;
     }
     .btn-primary:hover {
-      background-color: var(--accent-hover);
+      background-color: #0891b2;
     }
     .btn-secondary {
       background-color: #1e293b;
@@ -362,7 +339,7 @@
     }
     .stat-card {
       background-color: #0b1120;
-      border: 1px solid var(--card-border);
+      border: 1px solid #1e293b;
       border-radius: 8px;
       padding: 1.25rem;
       text-align: center;
@@ -377,23 +354,23 @@
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      color: var(--text-muted);
+      color: #94a3b8;
     }
     .findings-container {
       margin-top: 1.5rem;
     }
     .finding-card {
       background-color: #0b1120;
-      border: 1px solid var(--card-border);
+      border: 1px solid #1e293b;
       border-left-width: 4px;
       border-radius: 8px;
       padding: 1.25rem;
       margin-bottom: 1rem;
     }
-    .finding-card.critical { border-left-color: var(--fail); }
+    .finding-card.critical { border-left-color: #ef4444; }
     .finding-card.high { border-left-color: #f97316; }
-    .finding-card.medium { border-left-color: var(--warn); }
-    .finding-card.low { border-left-color: var(--info); }
+    .finding-card.medium { border-left-color: #f59e0b; }
+    .finding-card.low { border-left-color: #3b82f6; }
     .finding-header {
       display: flex;
       justify-content: space-between;
@@ -443,7 +420,7 @@
     }
     .finding-detail {
       font-size: 0.88rem;
-      color: var(--text-muted);
+      color: #94a3b8;
       margin-bottom: 0.75rem;
     }
     .finding-remediation {
@@ -487,24 +464,24 @@
       color: #a7f3d0;
     }
     footer {
-      border-top: 1px solid var(--card-border);
+      border-top: 1px solid #1e293b;
       padding: 2.5rem 1.5rem;
       text-align: left !important;
-      color: var(--text-muted);
+      color: #94a3b8;
       font-size: 0.85rem;
       background-color: #0b1120;
       margin-top: 4rem;
     }
     footer a {
-      color: var(--accent);
+      color: #06b6d4;
       text-decoration: none;
     }
     footer a:hover { text-decoration: underline; }
   
   /* AEO SECTION - CITABLE DEFINITION (MULTI-PARAGRAPH) */
   .aeo-section {
-    background: var(--surface, #0d1527);
-    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+    background: #0d1527;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
     padding: 36px;
     margin-bottom: 48px;
@@ -531,7 +508,7 @@
   .aeo-content p {
     font-size: 0.95rem;
     line-height: 1.75;
-    color: var(--text-muted, #94a3b8);
+    color: #94a3b8;
     margin-bottom: 16px;
   }
   .aeo-content p:last-child {
@@ -544,8 +521,8 @@
 
   /* GEO SECTION - 2-COLUMN COMPARISON MATRIX */
   .geo-section {
-    background: var(--surface, #0d1527);
-    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+    background: #0d1527;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
     padding: 36px;
     margin-bottom: 48px;
@@ -568,13 +545,13 @@
     .geo-grid { grid-template-columns: 1fr; }
   }
   .geo-col {
-    background: var(--surface-card, #0f172a);
-    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 8px;
     padding: 24px;
   }
-  .geo-col.vuln { border-top: 4px solid var(--danger, #ef4444); }
-  .geo-col.hardened { border-top: 4px solid var(--success, #10b981); }
+  .geo-col.vuln { border-top: 4px solid #ef4444; }
+  .geo-col.hardened { border-top: 4px solid #10b981; }
   .geo-col-title {
     font-size: 1.05rem;
     font-weight: 800;
@@ -591,14 +568,14 @@
   }
   .geo-list li {
     font-size: 0.88rem;
-    color: var(--text-muted, #94a3b8);
+    color: #94a3b8;
     line-height: 1.5;
     display: flex;
     align-items: flex-start;
     gap: 10px;
   }
-  .geo-list .cross { color: var(--danger, #ef4444); font-weight: 900; }
-  .geo-list .check { color: var(--success, #10b981); font-weight: 900; }
+  .geo-list .cross { color: #ef4444; font-weight: 900; }
+  .geo-list .check { color: #10b981; font-weight: 900; }
 
   /* FAQ ACCORDION SECTION */
   .faq-section {
@@ -619,8 +596,8 @@
     gap: 12px;
   }
   .faq-item {
-    background: var(--surface, #0d1527);
-    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+    background: #0d1527;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 8px;
     overflow: hidden;
   }
@@ -641,12 +618,12 @@
     transition: color 0.2s ease;
   }
   .faq-question:hover {
-    color: var(--accent, #1e00ff);
+    color: #1e00ff;
   }
   .faq-icon {
     font-size: 1.2rem;
     font-weight: 400;
-    color: var(--text-subtle, #64748b);
+    color: #64748b;
     transition: transform 0.2s ease;
   }
   .faq-item.active .faq-icon {
@@ -656,7 +633,7 @@
     display: none;
     padding: 0 24px 18px;
     font-size: 0.88rem;
-    color: var(--text-muted, #94a3b8);
+    color: #94a3b8;
     line-height: 1.7;
     border-top: 1px solid rgba(255, 255, 255, 0.04);
   }
@@ -670,25 +647,7 @@
 /* ==========================================================================
    TAVARDT UNIFIED ENTERPRISE DESIGN SYSTEM (ASTRYX / AG-ONE TOKENS)
    ========================================================================== */
-:root {
-  --bg: #050510 !important;
-  --bg2: #0b101e !important;
-  --bg3: #111827 !important;
-  --card-bg: #0b101e !important;
-  --surface: #0b101e !important;
-  --surface-card: #0e1526 !important;
-  --surface-elevated: #131d33 !important;
-  --card-border: rgba(255, 255, 255, 0.08) !important;
-  --border: rgba(255, 255, 255, 0.08) !important;
-  --accent: #1e00ff !important;
-  --accent-hover: #1500db !important;
-  --blue: #839bc8 !important;
-  --info: #1e00ff !important;
-  --text: #f8fafc !important;
-  --text-muted: #94a3b8 !important;
-  --text2: #94a3b8 !important;
-  --code-bg: #030712 !important;
-}
+
 
 html, body {
   background-color: #050510 !important;
@@ -1219,8 +1178,8 @@ footer a:hover,
 
   /* AEO SECTION - CITABLE DEFINITION (MULTI-PARAGRAPH) */
   .aeo-section {
-    background: var(--surface, #0d1527);
-    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+    background: #0d1527;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
     padding: 36px;
     margin-bottom: 48px;
@@ -1247,7 +1206,7 @@ footer a:hover,
   .aeo-content p {
     font-size: 0.95rem;
     line-height: 1.75;
-    color: var(--text-muted, #94a3b8);
+    color: #94a3b8;
     margin-bottom: 16px;
   }
   .aeo-content p:last-child {
@@ -1260,8 +1219,8 @@ footer a:hover,
 
   /* GEO SECTION - 2-COLUMN COMPARISON MATRIX */
   .geo-section {
-    background: var(--surface, #0d1527);
-    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+    background: #0d1527;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
     padding: 36px;
     margin-bottom: 48px;
@@ -1284,13 +1243,13 @@ footer a:hover,
     .geo-grid { grid-template-columns: 1fr; }
   }
   .geo-col {
-    background: var(--surface-card, #0f172a);
-    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 8px;
     padding: 24px;
   }
-  .geo-col.vuln { border-top: 4px solid var(--danger, #ef4444); }
-  .geo-col.hardened { border-top: 4px solid var(--success, #10b981); }
+  .geo-col.vuln { border-top: 4px solid #ef4444; }
+  .geo-col.hardened { border-top: 4px solid #10b981; }
   .geo-col-title {
     font-size: 1.05rem;
     font-weight: 800;
@@ -1307,14 +1266,14 @@ footer a:hover,
   }
   .geo-list li {
     font-size: 0.88rem;
-    color: var(--text-muted, #94a3b8);
+    color: #94a3b8;
     line-height: 1.5;
     display: flex;
     align-items: flex-start;
     gap: 10px;
   }
-  .geo-list .cross { color: var(--danger, #ef4444); font-weight: 900; }
-  .geo-list .check { color: var(--success, #10b981); font-weight: 900; }
+  .geo-list .cross { color: #ef4444; font-weight: 900; }
+  .geo-list .check { color: #10b981; font-weight: 900; }
 
   /* FAQ ACCORDION SECTION */
   .faq-section {
@@ -1335,8 +1294,8 @@ footer a:hover,
     gap: 12px;
   }
   .faq-item {
-    background: var(--surface, #0d1527);
-    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+    background: #0d1527;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 8px;
     overflow: hidden;
   }
@@ -1357,12 +1316,12 @@ footer a:hover,
     transition: color 0.2s ease;
   }
   .faq-question:hover {
-    color: var(--accent, #1e00ff);
+    color: #1e00ff;
   }
   .faq-icon {
     font-size: 1.2rem;
     font-weight: 400;
-    color: var(--text-subtle, #64748b);
+    color: #64748b;
     transition: transform 0.2s ease;
   }
   .faq-item.active .faq-icon {
@@ -1372,7 +1331,7 @@ footer a:hover,
     display: none;
     padding: 0 24px 18px;
     font-size: 0.88rem;
-    color: var(--text-muted, #94a3b8);
+    color: #94a3b8;
     line-height: 1.7;
     border-top: 1px solid rgba(255, 255, 255, 0.04);
   }
@@ -1430,8 +1389,8 @@ footer > div:first-child {
 
   /* AEO SECTION - CITABLE DEFINITION (MULTI-PARAGRAPH) */
   .aeo-section {
-    background: var(--surface, #0d1527);
-    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+    background: #0d1527;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
     padding: 36px;
     margin-bottom: 48px;
@@ -1458,7 +1417,7 @@ footer > div:first-child {
   .aeo-content p {
     font-size: 0.95rem;
     line-height: 1.75;
-    color: var(--text-muted, #94a3b8);
+    color: #94a3b8;
     margin-bottom: 16px;
   }
   .aeo-content p:last-child {
@@ -1471,8 +1430,8 @@ footer > div:first-child {
 
   /* GEO SECTION - 2-COLUMN COMPARISON MATRIX */
   .geo-section {
-    background: var(--surface, #0d1527);
-    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+    background: #0d1527;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
     padding: 36px;
     margin-bottom: 48px;
@@ -1495,13 +1454,13 @@ footer > div:first-child {
     .geo-grid { grid-template-columns: 1fr; }
   }
   .geo-col {
-    background: var(--surface-card, #0f172a);
-    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 8px;
     padding: 24px;
   }
-  .geo-col.vuln { border-top: 4px solid var(--danger, #ef4444); }
-  .geo-col.hardened { border-top: 4px solid var(--success, #10b981); }
+  .geo-col.vuln { border-top: 4px solid #ef4444; }
+  .geo-col.hardened { border-top: 4px solid #10b981; }
   .geo-col-title {
     font-size: 1.05rem;
     font-weight: 800;
@@ -1518,14 +1477,14 @@ footer > div:first-child {
   }
   .geo-list li {
     font-size: 0.88rem;
-    color: var(--text-muted, #94a3b8);
+    color: #94a3b8;
     line-height: 1.5;
     display: flex;
     align-items: flex-start;
     gap: 10px;
   }
-  .geo-list .cross { color: var(--danger, #ef4444); font-weight: 900; }
-  .geo-list .check { color: var(--success, #10b981); font-weight: 900; }
+  .geo-list .cross { color: #ef4444; font-weight: 900; }
+  .geo-list .check { color: #10b981; font-weight: 900; }
 
   /* FAQ ACCORDION SECTION */
   .faq-section {
@@ -1546,8 +1505,8 @@ footer > div:first-child {
     gap: 12px;
   }
   .faq-item {
-    background: var(--surface, #0d1527);
-    border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+    background: #0d1527;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 8px;
     overflow: hidden;
   }
@@ -1568,12 +1527,12 @@ footer > div:first-child {
     transition: color 0.2s ease;
   }
   .faq-question:hover {
-    color: var(--accent, #1e00ff);
+    color: #1e00ff;
   }
   .faq-icon {
     font-size: 1.2rem;
     font-weight: 400;
-    color: var(--text-subtle, #64748b);
+    color: #64748b;
     transition: transform 0.2s ease;
   }
   .faq-item.active .faq-icon {
@@ -1583,7 +1542,7 @@ footer > div:first-child {
     display: none;
     padding: 0 24px 18px;
     font-size: 0.88rem;
-    color: var(--text-muted, #94a3b8);
+    color: #94a3b8;
     line-height: 1.7;
     border-top: 1px solid rgba(255, 255, 255, 0.04);
   }
@@ -1593,7 +1552,7 @@ footer > div:first-child {
 
 </style>
   <meta name="ai-content-declaration" content="canonical-knowledge-base, expert-curated">
-  <meta name="geo.region" content="NZ">
+  <meta name="geo.region" content="CA">
 </head>
 <body>
 
@@ -1636,15 +1595,15 @@ footer > div:first-child {
 <div class="stat-label">MCP Servers</div>
 </div>
 <div class="stat-card">
-<div class="stat-val" id="stat-score" style="color: var(--pass);">100</div>
+<div class="stat-val" id="stat-score" style="color: #10b981;">100</div>
 <div class="stat-label">Compliance Score</div>
 </div>
 <div class="stat-card">
-<div class="stat-val" id="stat-findings" style="color: var(--fail);">0</div>
+<div class="stat-val" id="stat-findings" style="color: #ef4444;">0</div>
 <div class="stat-label">Detected Findings</div>
 </div>
 <div class="stat-card">
-<div class="stat-val" id="stat-status" style="color: var(--pass); font-size: 1.5rem;">SECURE</div>
+<div class="stat-val" id="stat-status" style="color: #10b981; font-size: 1.5rem;">SECURE</div>
 <div class="stat-label">Security Posture</div>
 </div>
 </div>
@@ -1667,6 +1626,7 @@ footer > div:first-child {
 </div>
 </div>
 <textarea id="hardened-output" style="height: 220px; color: #6ee7b7;"></textarea>
+<pre id="code-box" style="margin-top: 12px; padding: 12px; background: #020617; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 6px;"><code id="hardened-code" style="color: #6ee7b7; font-family: monospace; font-size: 0.82rem;">// Hardened MCP Configuration Specification</code></pre>
 </div>
 </div>
 </div>
@@ -1842,7 +1802,7 @@ footer > div:first-child {
           },
           "internal-metadata": {
             "command": "node",
-            "args": ["./fetch-tool.js", "--allow-host", "metadata.cloud-provider.internal"]
+            "args": ["./fetch-tool.js", "-allow-host", "metadata.cloud-provider.internal"]
           }
         }
       };
@@ -1861,10 +1821,10 @@ footer > div:first-child {
             "command": "docker",
             "args": [
               "run",
-              "--rm",
+              "-rm",
               "-i",
-              "--read-only",
-              "--cap-drop=ALL",
+              "-read-only",
+              "-cap-drop=ALL",
               "-e",
               "DATABASE_URL=${SECURE_DB_URL}",
               "mcp/postgres:0.2.1"
@@ -2023,7 +1983,7 @@ footer > div:first-child {
 
             args.forEach(function(arg) {
               const aStr = String(arg);
-              if (aStr === "-y" || aStr.startsWith("--")) return;
+              if (aStr === "-y" || aStr.startsWith("-")) return;
               if (!pkgFound && (aStr.includes("/") || aStr.includes("-") || aStr.length > 2)) {
                 pkgFound = true;
                 pkgName = aStr;
@@ -2064,23 +2024,23 @@ footer > div:first-child {
 
         const score = Math.max(0, 100 - penalty);
         let posture = "SECURE";
-        let postureColor = "var(--pass)";
+        let postureColor = "#10b981";
 
         if (score < 40) {
           posture = i18n.posture_critical;
-          postureColor = "var(--fail)";
+          postureColor = "#ef4444";
         } else if (score < 70) {
           posture = i18n.posture_high;
           postureColor = "#f97316";
         } else if (score < 90) {
           posture = i18n.posture_medium;
-          postureColor = "var(--warn)";
+          postureColor = "#f59e0b";
         } else if (findings.length > 0) {
           posture = i18n.posture_low;
-          postureColor = "var(--info)";
+          postureColor = "#3b82f6";
         } else {
           posture = i18n.posture_secure;
-          postureColor = "var(--pass)";
+          postureColor = "#10b981";
         }
 
         return {
@@ -2108,7 +2068,7 @@ footer > div:first-child {
           const dangerousShells = ["bash", "sh", "zsh", "powershell", "powershell.exe", "cmd", "cmd.exe"];
           if (dangerousShells.includes((hServer.command || "").toLowerCase())) {
             hServer.command = "docker";
-            hServer.args = ["run", "--rm", "-i", "--read-only", "--cap-drop=ALL", "sandbox-runner:latest"];
+            hServer.args = ["run", "-rm", "-i", "-read-only", "-cap-drop=ALL", "sandbox-runner:latest"];
           }
 
           hServer.args = hServer.args.map(function(arg) {
@@ -2162,11 +2122,11 @@ footer > div:first-child {
         statStatus.style.color = result.postureColor;
 
         if (result.score >= 90) {
-          statScore.style.color = "var(--pass)";
+          statScore.style.color = "#10b981";
         } else if (result.score >= 70) {
-          statScore.style.color = "var(--warn)";
+          statScore.style.color = "#f59e0b";
         } else {
-          statScore.style.color = "var(--fail)";
+          statScore.style.color = "#ef4444";
         }
 
         findingsList.innerHTML = "";
@@ -2240,6 +2200,7 @@ footer > div:first-child {
 
         const hardened = buildHardenedConfig(res.servers);
         hardenedOutput.value = JSON.stringify(hardened, null, 2);
+          const hc = document.getElementById("hardened-code"); if (hc) hc.textContent = hardenedOutput.value;
         hardenedBox.style.display = "block";
         hardenedBox.scrollIntoView({ behavior: "smooth" });
       });
@@ -2268,7 +2229,7 @@ footer > div:first-child {
         let md = `# MCP Security Audit Report\n\n`;
         md += `- **Date**: ${ts} UTC\n`;
         md += `- **Organization**: TAVARDT New Zealand\n`;
-        md += `- **Compliance Standard**: NZ Government Web Standards and AI Security Least Privilege\n`;
+        md += `- **Compliance Standard**: New Zealand Centre for Cyber Security AI Guidelines and Least Privilege\n`;
         md += `- **Servers Analyzed**: ${latestReport.serverCount}\n`;
         md += `- **Security Score**: ${latestReport.score} / 100\n`;
         md += `- **Overall Posture**: ${latestReport.posture}\n`;
