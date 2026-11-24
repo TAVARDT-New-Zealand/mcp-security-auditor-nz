@@ -73,7 +73,6 @@ jobs:
 
 ## Compliance and Technical Standards
 
-- **Jurisdiction**: New Zealand
 - **Compliance Standard**: NZ Government Web Standards and AI Security Least Privilege
 - **Maintaining Organization**: [TAVARDT-New-Zealand](https://github.com/TAVARDT-New-Zealand)
 
@@ -87,3 +86,7 @@ jobs:
 
 ### License
 Released under the MIT License. See [LICENSE](LICENSE) for full details.
+
+***
+
+© 2026 TAVARDT. All rights reserved.
