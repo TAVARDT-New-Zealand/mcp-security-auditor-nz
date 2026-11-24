@@ -75,7 +75,13 @@ jobs:
 
 - **Compliance Standard**: NZ Government Web Standards and AI Security Least Privilege
 
+***
 
+## Useful Links
+
+* **Corporate Portal:** https://ag.tavardt.com/nz/
+* **Diagnostic Suite:** https://tools.tavardt.com/nz/
+* **Technical Contact:** https://ag.tavardt.com/nz/contact/
 
 ***
 
