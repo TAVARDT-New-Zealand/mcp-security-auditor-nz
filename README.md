@@ -74,13 +74,8 @@ jobs:
 ## Compliance and Technical Standards
 
 - **Compliance Standard**: NZ Government Web Standards and AI Security Least Privilege
-- **Maintaining Organization**: [TAVARDT-New-Zealand](https://github.com/TAVARDT-New-Zealand)
 
-## Official Portals
 
-- **Main National Portal**: [Portal Institucional](https://ag.tavardt.com/nz/)
-- **Tools Hub**: [Central de Ferramentas](https://tools.tavardt.com/nz/)
-- **Technical Support Channel**: [Canal de Contato](https://ag.tavardt.com/nz/contact/)
 
 ***
 
